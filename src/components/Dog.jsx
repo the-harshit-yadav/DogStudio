@@ -141,6 +141,10 @@ const Dog = () => {
     dogMaterial.onBeforeCompile = onBeforeCompile
 
     model.scene.traverse((child) => {
+
+    //     if (child.isMesh) {
+    //     console.log("MESH:", child.name)
+    // }
         if (child.name.includes("DOG")) {
             child.material = dogMaterial
         } else {
@@ -159,7 +163,7 @@ const Dog = () => {
                 endTrigger: "#section-3",
                 start: "top top",
                 end: "bottom bottom",
-                markers: true,
+                markers: false,
                 scrub: true
             }
         })
